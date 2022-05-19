@@ -1,0 +1,110 @@
+@charset "uft-8";
+/* 문서에 최상단에 위치하게 할것 */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 패딩이나 마진을 키우더라도 박스크기가 커지는 걸 막을 수 있다 */
+}
+
+body
+{
+    color: #333;
+}
+
+a
+{
+    text-decoration: none;
+    color: #333;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+/* CSS reset */
+
+#fav
+{
+    background-color: #a8a8da;
+    text-align: center;
+    padding: 30px 0;
+    
+}
+
+#fav a
+{
+    width: 180px;
+    height: 100px;
+    display: inline-block;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px #333,
+    -5px -5px 12px rgb(230, 64, 64);
+    text-decoration: none;
+    padding-top: 12px;
+    color: #666;
+    position: relative;
+    transition: all 0.7s;
+}
+
+#fav a:hover
+{
+    top: -5px;
+    background-color: rgb(178, 206, 230);
+    box-shadow: 10px 10px 12px #333,
+    -10px -10px 12px rgb(50, 83, 231);
+}
+
+#fav i
+{
+    font-size: 2.5em;
+}
+
+#fav div
+{
+    margin-top: 7px;
+}
+
+#box3
+{
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+    position: relative;
+}
+
+#hide
+{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: beige;
+    left: 180px;
+    top: -5px;
+    display: none;
+}
+
+#hide::before
+{
+    content: "";
+    display: block;
+    width: 16px;
+    height: 20px;
+    position: absolute;
+    left: -16px;
+    top: 30%;
+    box-sizing: border-box;
+    border-right: 16px solid black;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+}
+
+#box3:hover #hide
+{
+    display: block;
+}
+
